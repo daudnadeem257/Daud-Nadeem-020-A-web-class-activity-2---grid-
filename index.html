@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chessboard</title>
+  <style>
+    .chessboard {
+      display: grid;
+      grid-template-columns: repeat(8, 100px);
+      grid-template-rows: repeat(8, 100px);
+      width: 800px;
+      height: 800px;
+      border: 5px solid black;
+    }
+
+    .chessboard div {
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Alternate colors */
+    .chessboard div:nth-child(odd) {
+      background-color: #b58863; /* Dark square */
+    }
+
+    .chessboard div:nth-child(even) {
+      background-color: #f0d9b5; /* Light square */
+    }
+
+    /* Correct row pattern */
+    .chessboard div:nth-child(16n + 9),
+    .chessboard div:nth-child(16n + 11),
+    .chessboard div:nth-child(16n + 13),
+    .chessboard div:nth-child(16n + 15) {
+      background-color: #f0d9b5; /* Light square */
+    }
+
+    .chessboard div:nth-child(16n + 10),
+    .chessboard div:nth-child(16n + 12),
+    .chessboard div:nth-child(16n + 14),
+    .chessboard div:nth-child(16n + 16) {
+      background-color: #b58863; /* Dark square */
+    }
+  </style>
+</head>
+<body>
+  <div class="chessboard">
+    <!-- 64 squares without repeating class -->
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+</body>
+</html>
